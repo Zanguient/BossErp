@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Image, Button} from 'react-native';
-import {GET, POST} from "../../utils/fetch";
-import LoginButton from "../../components/loginButton";
+import {
+    StyleSheet, Text,
+    View
+} from 'react-native';
+
+import {LoginButton, LoginCircleImage, LoginTextView, LoginLinkButton} from "../../components/LoginComponents";
 
 export default class Login extends Component {
 
@@ -9,28 +12,46 @@ export default class Login extends Component {
         header: null
     };
 
-    onPressCallback() {
-        GET("http://www.baidu.com", 1).then(result => {
-             console.log(result);
-        }).then(error => {
-             console.log(error);
-        });
-    }
+    onPressClick = () => {
+        console.log('1');
+    };
 
     render() {
         return (
             <View style={styles.container}>
-                <LoginButton name='登录' onPressCallback={this.onPressCallback}/>
+                <View style={styles.circleImg}>
+                    <LoginCircleImage/>
+                </View>
+                <LoginTextView placeholder='请输入账号'/>
+                <LoginTextView placeholder='请输入密码'/>
+                <LoginButton name='登录' onPress={this.onPressClick}/>
+                <View style={styles.links}>
+                    <LoginLinkButton name='忘记密码'/>
+                    <LoginLinkButton name='注册'/>
+                </View>
             </View>
-        )
+        );
     }
 }
 
-const styles = StyleSheet.create({
+
+let styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 50,
-        paddingTop: 0
+        backgroundColor: '#594eb799',
+        justifyContent: 'center',
+        paddingLeft: 50,
+        paddingRight: 50
     },
-    btn: {}
+    circleImg: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingBottom: 20
+    },
+    links: {
+        flexDirection: 'row',
+        paddingTop: 20,
+        justifyContent: 'space-between'
+    }
 });
+
