@@ -22,7 +22,7 @@ const RootStack = StackNavigator(
         },
     },
     {
-        initialRouteName: 'Welcome',     //设置初始路由为Home
+        initialRouteName: 'Index',     //设置初始路由为Home
         navigationOptions:{           //导航栏通用设置
             headerStyle:{
                 backgroundColor:'#7276ff'
