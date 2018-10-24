@@ -24,6 +24,7 @@ const RootStack = StackNavigator(
     {
         initialRouteName: 'Welcome',     //设置初始路由为Home
         navigationOptions:{           //导航栏通用设置
+            header: null,
             headerStyle:{
                 backgroundColor:'#7276ff'
             }

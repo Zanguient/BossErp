@@ -8,12 +8,8 @@ import {LoginButton, LoginCircleImage, LoginTextView, LoginLinkButton} from "../
 
 export default class Login extends Component {
 
-    static navigationOptions = {
-        header: null
-    };
-
     onPressClick = () => {
-        console.log('1');
+        this.props.navigation.navigate('Index',{})
     };
 
     render() {

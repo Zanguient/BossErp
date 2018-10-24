@@ -4,10 +4,6 @@ import Swiper from 'react-native-swiper';
 
 export default class Guidance extends Component {
 
-    static navigationOptions = {
-        header: null
-    };
-
     render() {
         let firstPic = {
             uri: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540289147745&di=ceba32bae2bae87a802ddab27e538dea&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01c00d5876f441a801219c775361dc.jpg'
