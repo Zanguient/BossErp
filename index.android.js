@@ -1,53 +1,46 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import React, {Component} from 'react';
+import {AppRegistry, StyleSheet, View} from 'react-native';
+import {StackNavigator} from 'react-navigation'
+import Welcome from "./views/welcome/welcome";
+import Guidance from "./views/welcome/guidance";
+import Login from "./views/login/login";
+import Index from "./views/main/index";
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+const RootStack = StackNavigator(
+    {
+        Welcome: {                       //定义Home对应HomeScreen组件
+            screen: Welcome,
+        },
+        Guidance: {
+            screen: Guidance,
+        },
+        Login:{
+            screen: Login,
+        },
+        Index:{
+            screen: Index
+        },
+    },
+    {
+        initialRouteName: 'Welcome',     //设置初始路由为Home
+        navigationOptions:{           //导航栏通用设置
+            headerStyle:{
+                backgroundColor:'#7276ff'
+            }
+        }
+    }
+);
 
 export default class BossErp extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
+    render() {
+        return (
+            <RootStack></RootStack>
+        )
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+
 });
 
 AppRegistry.registerComponent('BossErp', () => BossErp);
