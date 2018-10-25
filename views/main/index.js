@@ -5,6 +5,9 @@ import Main from "./main";
 import Msg from "./msg";
 import Things from "./things";
 
+import Entypo from 'react-native-vector-icons/Entypo'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+
 // 注册tabs
 const TabNavigators = createBottomTabNavigator({
     Home: {
@@ -12,8 +15,7 @@ const TabNavigators = createBottomTabNavigator({
         navigationOptions: {  // 也可以写在组件的static navigationOptions内
             tabBarLabel: '首页',
             tabBarIcon: ({tintColor, focused}) => (
-                <Image source={require('../../images/book.png')}
-                       style={[styles.icon, {tintColor: tintColor}]} resizeMode='contain'/>
+                <Entypo name={'home'} size={22} style={{color: tintColor}}/>
             )
         }
     },
@@ -22,8 +24,7 @@ const TabNavigators = createBottomTabNavigator({
         navigationOptions: {
             tabBarLabel: '消息',
             tabBarIcon: ({tintColor, focused}) => (
-                <Image source={require('../../images/book.png')}
-                       style={[styles.icon, {tintColor: tintColor}]} resizeMode='contain'/>
+                <MaterialIcons name={'sms'} size={22} style={{color: tintColor}}/>
             )
         }
     },
@@ -32,8 +33,7 @@ const TabNavigators = createBottomTabNavigator({
         navigationOptions: {
             tabBarLabel: '新鲜事',
             tabBarIcon: ({tintColor, focused}) => (
-                <Image source={require('../../images/book.png')}
-                       style={[styles.icon, {tintColor: tintColor}]} resizeMode='contain'/>
+                <Entypo name={'news'} size={22} style={{color: tintColor}}/>
             )
         }
     }
