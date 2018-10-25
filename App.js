@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {Image, Platform, StatusBar, StyleSheet, View, Text} from 'react-native';
 import {StackNavigator} from 'react-navigation'
-import Colors from "./color/color";
 import Welcome from "./views/welcome/welcome";
 import Guidance from "./views/welcome/guidance";
 import Login from "./views/login/login";
 import Index from "./views/main/index";
+import Colors from "./theme/colors";
 
 const instructions = Platform.select({});
 

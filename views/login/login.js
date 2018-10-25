@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
 import {
-    StyleSheet,
+    StyleSheet, Text,
     View
 } from 'react-native';
 
-
 import {LoginButton, LoginCircleImage, LoginTextView, LoginLinkButton} from "../../components/LoginComponents";
+import Colors from "../../theme/colors";
 
 export default class Login extends Component {
 
     onPressClick = () => {
-        this.props.navigation.navigate('Index', {})
+        this.props.navigation.navigate('Index', {});
+    };
+
+    static navigationOptions = {
+        header: null
     };
 
     render() {
@@ -35,7 +39,7 @@ export default class Login extends Component {
 let styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#594eb799',
+        backgroundColor: Colors.loginWindowBackground,
         justifyContent: 'center',
         paddingLeft: 50,
         paddingRight: 50

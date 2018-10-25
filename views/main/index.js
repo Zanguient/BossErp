@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Image, Text} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from 'react-navigation'
 import Main from "./main";
 import Msg from "./msg";
 import Things from "./things";
-
-import AntDesign from 'react-native-vector-icons/AntDesign'
-import Entypo from 'react-native-vector-icons/Entypo'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import Colors from "../../theme/colors";
 
 const TabNavigators = createBottomTabNavigator({
     Home: {
@@ -54,7 +52,7 @@ const TabNavigators = createBottomTabNavigator({
             height: 0  // 如TabBar下面显示有一条线，可以设高度为0后隐藏
         },
         style: {
-            backgroundColor: '#FFFFFF', // TabBar 背景色
+            backgroundColor: Colors.navigationBarColor, // TabBar 背景色
             // height: 44
         },
         labelStyle: {

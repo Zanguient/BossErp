@@ -1,12 +1,13 @@
-const Color = {
+const Colors = {
     //状态栏的颜色
-    "statusBarColor": "#FF660088",
-    //页面导航栏的颜色 -->
-    "colorPrimary": "#FF6600",
+    "statusBarColor": "#8F92CB88",
+    //页面导航栏的颜色
+    "colorPrimary": "#8F92CB",
     //页面内容的背景颜色
     "windowBackground": "#FF6600",
     //底部导航栏的颜色
-    "navigationBarColor": "#FF6600",
+    "navigationBarColor": "white",
+
     //应用的前景色，ListView的分割线，switch滑动区默认使用该颜色
     "colorForeground": "#FF6600",
     //应用的背景色，popMenu的背景默认使用该颜色
@@ -30,7 +31,10 @@ const Color = {
     //应用的主要文字颜色，actionBar的标题文字默认使用该颜色
     "textColorPrimary": "#FF6600",
     //switch thumbs 默认状态的颜色. (switch off)
-    "colorSwitchThumbNormal": "#FF6600"
+    "colorSwitchThumbNormal": "#FF6600",
+
+    //登录界面的背景颜色
+    "loginWindowBackground": "#8F92CB"
 };
 
-export default Color;
+export default Colors;
