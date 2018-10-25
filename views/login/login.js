@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import {
-    StyleSheet, Text,
+    StyleSheet,
     View
 } from 'react-native';
 
-import Feather from 'react-native-vector-icons/Feather'
 
 import {LoginButton, LoginCircleImage, LoginTextView, LoginLinkButton} from "../../components/LoginComponents";
 
@@ -17,7 +16,6 @@ export default class Login extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Feather name={'airplay'} size={50} color={'#FF6600'}></Feather>
                 <View style={styles.circleImg}>
                     <LoginCircleImage/>
                 </View>
