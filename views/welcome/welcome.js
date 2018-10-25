@@ -13,28 +13,32 @@ export default class Welcome extends Component {
                     AsyncStorageUtil.get("isLogin").then((isLogin) => {
                         if (isLogin) {
                             //已经登录,跳转到首页
-                            this.props.navigation.navigate('Index',{})
+                            this.props.navigation.navigate('Index', {})
                         } else {
                             //没有登录跳转到登录界面
-                            this.props.navigation.navigate('Login',{})
+                            this.props.navigation.navigate('Login', {})
                         }
                     });
                 } else {
                     //为第一次进入
                     AsyncStorageUtil.save("isFirstIn", true);
                     //跳转到引导界面
-                    this.props.navigation.navigate('Guidance',{})
+                    this.props.navigation.navigate('Guidance', {})
                 }
             });
         }, 1500);
     }
+
+    static navigationOptions = {
+        header: null
+    };
 
     render() {
         let pic = {
             uri: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540289147747&di=3ca418f1160159a42fb7775bed267b76&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01619056fcd5496ac7257948a039ae.jpg%401280w_1l_2o_100sh.jpg'
         };
         return (
-            <Image source={pic} style={styles.img}></Image>
+            <Image source={pic} style={styles.img}/>
         );
     }
 
